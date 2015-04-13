@@ -18,16 +18,16 @@
     <meta name="apple-mobile-web-app-title" content="Ghost" />
 
     <link rel="shortcut icon" href="http://127.0.0.1:2368/favicon.ico" />
-    <link rel="apple-touch-icon-precomposed" href="http://127.0.0.1:2368/ghost/img/touch-icon-iphone.png?v=0d19a7984b" />
-    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://127.0.0.1:2368/ghost/img/touch-icon-ipad.png?v=0d19a7984b" />
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://127.0.0.1:2368/ghost/img/small.png?v=0d19a7984b" />
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://127.0.0.1:2368/ghost/img/medium.png?v=0d19a7984b" />
+    <link rel="apple-touch-icon-precomposed" href="http://127.0.0.1:2368/ghost/img/touch-icon-iphone.png?v=e95f9ba2c1" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://127.0.0.1:2368/ghost/img/touch-icon-ipad.png?v=e95f9ba2c1" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://127.0.0.1:2368/ghost/img/small.png?v=e95f9ba2c1" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://127.0.0.1:2368/ghost/img/medium.png?v=e95f9ba2c1" />
 
     <meta name="application-name" content="Ghost" />
     <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="msapplication-square70x70logo" content="/ghost/img/small.png?v=0d19a7984b" />
-    <meta name="msapplication-square150x150logo" content="/ghost/img/medium.png?v=0d19a7984b" />
-    <meta name="msapplication-square310x310logo" content="/ghost/img/large.png?v=0d19a7984b" />
+    <meta name="msapplication-square70x70logo" content="/ghost/img/small.png?v=e95f9ba2c1" />
+    <meta name="msapplication-square150x150logo" content="/ghost/img/medium.png?v=e95f9ba2c1" />
+    <meta name="msapplication-square310x310logo" content="/ghost/img/large.png?v=e95f9ba2c1" />
 
         <meta name="env-fileStorage" content="true" />
         <meta name="env-apps" content="false" />
@@ -36,11 +36,11 @@
         <meta name="env-blogTitle" content="loving learning" />
 
         <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700" />
-    <link rel="stylesheet" href="http://127.0.0.1:2368/ghost/css/ghost.min.css?v=0d19a7984b" />
+    <link rel="stylesheet" href="http://127.0.0.1:2368/ghost/css/ghost.min.css?v=e95f9ba2c1" />
 </head>
 <body>
 
-    <script src="http://127.0.0.1:2368/ghost/scripts/vendor-dev.js?v=0d19a7984b"></script><script src="http://127.0.0.1:2368/ghost/scripts/templates-dev.js?v=0d19a7984b"></script><script src="http://127.0.0.1:2368/ghost/scripts/ghost-dev.js?v=0d19a7984b"></script>
+    <script src="http://127.0.0.1:2368/ghost/scripts/vendor-dev.js?v=e95f9ba2c1"></script><script src="http://127.0.0.1:2368/ghost/scripts/templates-dev.js?v=e95f9ba2c1"></script><script src="http://127.0.0.1:2368/ghost/scripts/ghost-dev.js?v=e95f9ba2c1"></script>
 
 </body>
 </html>
