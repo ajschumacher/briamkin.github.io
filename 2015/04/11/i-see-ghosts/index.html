@@ -1,0 +1,262 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Creating a Ghost Blog on Github Pages</title>
+    <meta name="description" content="I switched recently from Jekyll to Ghost for my blogging. Setting up Ghost on Github Pages is really easy if you follow my instructions below!">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="../../../../assets/favicon/apple-touch-icon-57x57.png?v=c99c34aeb5">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../../../assets/favicon/apple-touch-icon-60x60.png?v=c99c34aeb5">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../../../assets/favicon/apple-touch-icon-72x72.png?v=c99c34aeb5">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../../../assets/favicon/apple-touch-icon-76x76.png?v=c99c34aeb5">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../../../assets/favicon/apple-touch-icon-114x114.png?v=c99c34aeb5">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../../../assets/favicon/apple-touch-icon-120x120.png?v=c99c34aeb5">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../../../assets/favicon/apple-touch-icon-144x144.png?v=c99c34aeb5">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../../../assets/favicon/apple-touch-icon-152x152.png?v=c99c34aeb5">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../../assets/favicon/apple-touch-icon-180x180.png?v=c99c34aeb5">
+    <link rel="icon" type="image/png" href="../../../../assets/favicon/favicon-32x32.png?v=c99c34aeb5">
+    <link rel="icon" type="image/png" href="../../../../assets/favicon/android-chrome-192x192.png?v=c99c34aeb5">
+    <link rel="icon" type="image/png" href="../../../../assets/favicon/favicon-96x96.png?v=c99c34aeb5">
+    <link rel="icon" type="image/png" href="../../../../assets/favicon/favicon-16x16.png?v=c99c34aeb5">
+    <link rel="manifest" href="../../../../assets/favicon/manifest.json?v=c99c34aeb5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/assets/favicon/mstile-144x144.png?v=c99c34aeb5">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" type="text/css" href="../../../../assets/css/screen.css?v=c99c34aeb5">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
+
+    <link rel="canonical" href="http://briank.im/2015/04/11/i-see-ghosts/">
+    
+    <meta property="og:site_name" content="loving learning">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Creating a Ghost Blog on Github Pages">
+    <meta property="og:description" content="I switched recently from Jekyll to Ghost for my blogging. Setting up Ghost on Github Pages is really easy if you follow my instructions below!...">
+    <meta property="og:url" content="http://briank.im/2015/04/11/i-see-ghosts/">
+    <meta property="article:published_time" content="2015-04-12T01:59:00.000Z">
+    <meta property="article:modified_time" content="2015-04-13T04:00:02.438Z">
+    <meta property="article:tag" content="learning">
+    <meta property="article:tag" content="jekyll">
+    <meta property="article:tag" content="ghost">
+    <meta property="article:tag" content="blog">
+    <meta property="article:tag" content="blogging">
+    <meta property="article:tag" content="teaching">
+    <meta property="article:tag" content="cli">
+    <meta property="article:tag" content="buster">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Creating a Ghost Blog on Github Pages">
+    <meta name="twitter:description" content="I switched recently from Jekyll to Ghost for my blogging. Setting up Ghost on Github Pages is really easy if you follow my instructions below!...">
+    <meta name="twitter:url" content="http://briank.im/2015/04/11/i-see-ghosts/">
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "loving learning",
+    "author": {
+        "@type": "Person",
+        "name": "bk",
+        "image": "http://briank.im/content/images/2015/04/profile.jpg",
+        "url": "http://briank.im/author/bk",
+        "sameAs": ""
+    },
+    "headline": "Creating a Ghost Blog on Github Pages",
+    "url": "http://briank.im/2015/04/11/i-see-ghosts/",
+    "datePublished": "2015-04-12T01:59:00.000Z",
+    "dateModified": "2015-04-13T04:00:02.438Z",
+    "keywords": "learning, jekyll, ghost, blog, blogging, teaching, cli, buster",
+    "description": "I switched recently from Jekyll to Ghost for my blogging. Setting up Ghost on Github Pages is really easy if you follow my instructions below!..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.5">
+    <link rel="alternate" type="application/rss+xml" title="loving learning" href="http://briank.im/rss/">
+</head>
+<body class="post-template tag-learning tag-jekyll tag-ghost-tag tag-blog tag-blogging tag-teaching tag-cli tag-buster nav-closed">
+
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="index.html#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+            <li class="nav-home" role="presentation"><a href="http://briank.im/">Home</a></li>
+    </ul>
+    <a class="subscribe-button icon-feed" href="../../../../rss/index.rss">Subscribe</a>
+</div>
+<span class="nav-cover"></span>
+
+
+    <div class="site-wrapper">
+
+        
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        <a class="blog-logo" href="http://briank.im"><img src="../../../../content/images/2015/04/bk_logo-150.png" alt="Blog Logo"></a>
+            <a class="menu-button" href="index.html#"><span class="burger">☰</span><span class="word">Menu</span></a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post tag-learning tag-jekyll tag-ghost-tag tag-blog tag-blogging tag-teaching tag-cli tag-buster featured">
+
+        <header class="post-header">
+            <h1 class="post-title">I See Ghost(s), Goodbye Jeykll</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2015-04-11">11 April 2015</time>  on <a href="../../../../tag/learning/">learning</a>, <a href="../../../../tag/jekyll/">jekyll</a>, <a href="../../../../tag/ghost-tag/">ghost</a>, <a href="../../../../tag/blog/">blog</a>, <a href="../../../../tag/blogging/">blogging</a>, <a href="../../../../tag/teaching/">teaching</a>, <a href="../../../../tag/cli/">cli</a>, <a href="../../../../tag/buster/">buster</a>
+            </section>
+        </header>
+
+        <section class="post-content">
+            <h2 id="switchingfromjekylltoghost">Switching from Jekyll to Ghost</h2>
+
+<p><img src="../../../../content/images/2015/04/ghost.jpg" alt=""></p>
+
+<p>So after blogging the first week of camp on <a href="https://github.com/jekyll/jekyll">Jekyll</a> which is a great tool for blogging, I decided to move my blog over to Ghost. I've heard a lot about Ghost as the node.js built, strictly blogging platform, and have always wanted to give it a go. While Jekyll was fun to us, it just didn't seem poweful enough for what I wanted to accomplish. And having worked extensively with Wordpress, I didn't want to setup a full wp blog, just because I was bored of it and wanted to try something new. What I loved about Jekyll was that it is done all through Github and is super easily hosted on Github pages. So when I decided to move to ghost, I wanted to figure out how I could similarly host it on Github and also use it to make changes. </p>
+
+<p>So here is my super simple guide on how to setup a Ghost blog, host it on github, and how to update it.</p>
+
+<h4 id="step0initialsetup">Step 0: Initial Setup</h4>
+
+<p>You'll need to have pip, node.js/npm, and wget so if you don't have those installed, you can do it with brew. And if you don't have brew installed you can install it with:  </p>
+
+<pre><code>ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"  
+</code></pre>
+
+<p>Then to install pip,node.js/npm and wget you can do this:  </p>
+
+<pre><code>easy_install pip  
+brew install wget  
+brew install node  
+</code></pre>
+
+<p>And lastly, we'll have to get <a href="https://github.com/axitkhurana/buster">buster</a>. Buster is actually written in Python, and it takes a Ghost blog and changes it into static pages so that you can upload it to Github.  </p>
+
+<pre><code>pip istall buster  
+</code></pre>
+
+<h4 id="step1downloadghost">Step 1: Download Ghost</h4>
+
+<p>Next, download <a href="https://ghost.org/download/">ghost</a> and unzip it into whatever directory you want to use. Once it's installed, in your terminal, cd into that directory. Then you will have to install and run ghost. Once your in the folder that ghost was installed into, type these commands:  </p>
+
+<pre><code>npm install  
+npm start  
+</code></pre>
+
+<p>This will start a local instance of your ghost blog here: <a href="../../../../ghost">http://127.0.0.1:2368/ghost</a>. If you're not automatically redirected, you can click that link. Once there, setup your blog, and add a post or something to check.  </p>
+
+<h4 id="step2createagithubrepo">Step 2: Create a Github Repo</h4>
+
+<p>Now go to your <a href="https://www.github.com">github</a> account and create a new repo at yourname.github.io with your account name going where I wrote "yourname", duh! If you already used your single github pages allowance, then you'll have to either create a new github account to host it or change the pagename to something else (it will no longer be hosted on github accounts then..) to make room for your ghost blog to be hosted there.</p>
+
+<h4 id="step3setupbuster">Step 3: Setup Buster</h4>
+
+<p>Now, open a new terminal window. Create a new folder/directory wherever you would like to put the new static pages that buster will create. I just created a new directory called "ghost-live", ironic I know. Just like before, cd into that directory and run these commands:  </p>
+
+<pre><code>buster setup  
+</code></pre>
+
+<p>When you run this, it will ask you to put in your repo address, which will be something like this: <a href="https://github.com/yourname/yourname.github.io.git">https://github.com/yourname/yourname.github.io.git</a>. Then, you'll have to generate the static pages with this command.  </p>
+
+<pre><code>buster generate --domain=http://127.0.0.1:2368  
+</code></pre>
+
+<h4 id="step4pushtogithub">Step 4: Push to Github</h4>
+
+<p>You have now created a static version of your blog that you can host on Github. Now we have to push it to git hub. When you generate the blog, it creates or overwrites a folder names static. So first go into that folder:  </p>
+
+<pre><code>cd static  
+</code></pre>
+
+<p>Then add, commit and push your changes to your Github page!  </p>
+
+<pre><code>git add -all  
+git commit -m 'Initial commit'  
+git push  
+</code></pre>
+
+<p>Wait a few seconds (it may take a few minutes... but that is rare), and go to the page and see if it's running at yourname.github.com.  </p>
+
+<h4 id="step5workflow">Step 5: Workflow</h4>
+
+<p>So now that my blog is all setup, my workflow looks something like this:  </p>
+
+<h6 id="1gointomyghostinstallationand">1. Go into my ghost installation and:</h6>
+
+<pre><code>npm start  
+</code></pre>
+
+<h6 id="2thengotohttp1270012368ghosthttp1270012368ghostandwriteanewpost">2. Then go to <a href="../../../../ghost">http://127.0.0.1:2368/ghost</a> and write a new post.</h6>
+
+<h6 id="3thengointomystaticpagesfolderrootnotintothestaticdirectoryandrun">3. Then go into my static pages folder root (not into the static directory) and run:</h6>
+
+<pre><code>buster generate --domain=http://127.0.0.1:2368  
+git add -all  
+git commit -m 'Initial commit'  
+git push  
+</code></pre>
+
+<h6 id="4checksitetoseeifitupdated">4. Check site to see if it updated.</h6>
+
+<p>This might seem like a lot, but it's actually really quick, especially if you set up an alias in your .bash_profile for the buster generate command.</p>
+
+<p>Please email me if you have any questions!</p>
+        </section>
+
+        <footer class="post-footer">
+
+
+            <figure class="author-image">
+                <a class="img" href="../../../../author/bk/" style="background-image: url(../../../../content/images/2015/04/profile.jpg)"><span class="hidden">bk's Picture</span></a>
+            </figure>
+
+            <section class="author">
+                <h4><a href="../../../../author/bk/">bk</a></h4>
+
+                    <p>There are three things I love in this life: learning, efficiency and my wife, not necessarily in that order</p>
+                <div class="author-meta">
+                    <span class="author-location icon-location">ny, ny</span>
+                    
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/share?text=I%20See%20Ghost(s)%2C%20Goodbye%20Jeykll&amp;url=http://briank.im/2015/04/11/i-see-ghosts/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://briank.im/2015/04/11/i-see-ghosts/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://briank.im/2015/04/11/i-see-ghosts/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+        </footer>
+
+    </article>
+</main>
+
+
+
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href="http://briank.im">loving learning</a> © 2015</section>
+        </footer>
+
+    </div>
+
+    <script src="../../../../public/jquery.js?v=c99c34aeb5"></script>
+
+    <script type="text/javascript" src="../../../../assets/js/jquery.fitvids.js?v=c99c34aeb5"></script>
+    <script type="text/javascript" src="../../../../assets/js/index.js?v=c99c34aeb5"></script>
+
+</body>

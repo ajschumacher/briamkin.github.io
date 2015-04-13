@@ -1,4 +1,160 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>loving learning</title><description>my journey to learn as much as i can</description><link>http://briank.im/</link><generator>Ghost 0.5</generator><lastBuildDate>Sun, 12 Apr 2015 17:48:06 GMT</lastBuildDate><atom:link href="http://briank.im/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>A New Start</title><description>&lt;h2 id="day1atmetis"&gt;Day 1 at Metis&lt;/h2&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>loving learning</title><description>my journey to learn as much as i can</description><link>http://briank.im/</link><generator>Ghost 0.5</generator><lastBuildDate>Mon, 13 Apr 2015 04:02:14 GMT</lastBuildDate><atom:link href="http://briank.im/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>I See Ghost(s), Goodbye Jeykll</title><description>&lt;h2 id="switchingfromjekylltoghost"&gt;Switching from Jekyll to Ghost&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src="http://briank.im/content/images/2015/04/ghost.jpg" alt=""&gt;&lt;/p&gt;
+
+&lt;p&gt;So after blogging the first week of camp on &lt;a href="https://github.com/jekyll/jekyll"&gt;Jekyll&lt;/a&gt; which is a great tool for blogging, I decided to move my blog over to Ghost. I've heard a lot about Ghost as the node.js built, strictly blogging platform, and have always wanted to give it a go. While Jekyll was fun to us, it just didn't seem poweful enough for what I wanted to accomplish. And having worked extensively with Wordpress, I didn't want to setup a full wp blog, just because I was bored of it and wanted to try something new. What I loved about Jekyll was that it is done all through Github and is super easily hosted on Github pages. So when I decided to move to ghost, I wanted to figure out how I could similarly host it on Github and also use it to make changes. &lt;/p&gt;
+
+&lt;p&gt;So here is my super simple guide on how to setup a Ghost blog, host it on github, and how to update it.&lt;/p&gt;
+
+&lt;h4 id="step0initialsetup"&gt;Step 0: Initial Setup&lt;/h4&gt;
+
+&lt;p&gt;You'll need to have pip, node.js/npm, and wget so if you don't have those installed, you can do it with brew. And if you don't have brew installed you can install it with:  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then to install pip,node.js/npm and wget you can do this:  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;easy_install pip  
+brew install wget  
+brew install node  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And lastly, we'll have to get &lt;a href="https://github.com/axitkhurana/buster"&gt;buster&lt;/a&gt;. Buster is actually written in Python, and it takes a Ghost blog and changes it into static pages so that you can upload it to Github.  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pip istall buster  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id="step1downloadghost"&gt;Step 1: Download Ghost&lt;/h4&gt;
+
+&lt;p&gt;Next, download &lt;a href="https://ghost.org/download/"&gt;ghost&lt;/a&gt; and unzip it into whatever directory you want to use. Once it's installed, in your terminal, cd into that directory. Then you will have to install and run ghost. Once your in the folder that ghost was installed into, type these commands:  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm install  
+npm start  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will start a local instance of your ghost blog here: &lt;a href="http://127.0.0.1:2368/ghost"&gt;http://127.0.0.1:2368/ghost&lt;/a&gt;. If you're not automatically redirected, you can click that link. Once there, setup your blog, and add a post or something to check.  &lt;/p&gt;
+
+&lt;h4 id="step2createagithubrepo"&gt;Step 2: Create a Github Repo&lt;/h4&gt;
+
+&lt;p&gt;Now go to your &lt;a href="https://www.github.com"&gt;github&lt;/a&gt; account and create a new repo at yourname.github.io with your account name going where I wrote "yourname", duh! If you already used your single github pages allowance, then you'll have to either create a new github account to host it or change the pagename to something else (it will no longer be hosted on github accounts then..) to make room for your ghost blog to be hosted there.&lt;/p&gt;
+
+&lt;h4 id="step3setupbuster"&gt;Step 3: Setup Buster&lt;/h4&gt;
+
+&lt;p&gt;Now, open a new terminal window. Create a new folder/directory wherever you would like to put the new static pages that buster will create. I just created a new directory called "ghost-live", ironic I know. Just like before, cd into that directory and run these commands:  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;buster setup  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When you run this, it will ask you to put in your repo address, which will be something like this: &lt;a href="https://github.com/yourname/yourname.github.io.git"&gt;https://github.com/yourname/yourname.github.io.git&lt;/a&gt;. Then, you'll have to generate the static pages with this command.  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;buster generate --domain=http://127.0.0.1:2368  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id="step4pushtogithub"&gt;Step 4: Push to Github&lt;/h4&gt;
+
+&lt;p&gt;You have now created a static version of your blog that you can host on Github. Now we have to push it to git hub. When you generate the blog, it creates or overwrites a folder names static. So first go into that folder:  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd static  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then add, commit and push your changes to your Github page!  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git add -all  
+git commit -m 'Initial commit'  
+git push  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Wait a few seconds (it may take a few minutes... but that is rare), and go to the page and see if it's running at yourname.github.com.  &lt;/p&gt;
+
+&lt;h4 id="step5workflow"&gt;Step 5: Workflow&lt;/h4&gt;
+
+&lt;p&gt;So now that my blog is all setup, my workflow looks something like this:  &lt;/p&gt;
+
+&lt;h6 id="1gointomyghostinstallationand"&gt;1. Go into my ghost installation and:&lt;/h6&gt;
+
+&lt;pre&gt;&lt;code&gt;npm start  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h6 id="2thengotohttp1270012368ghosthttp1270012368ghostandwriteanewpost"&gt;2. Then go to &lt;a href="http://127.0.0.1:2368/ghost"&gt;http://127.0.0.1:2368/ghost&lt;/a&gt; and write a new post.&lt;/h6&gt;
+
+&lt;h6 id="3thengointomystaticpagesfolderrootnotintothestaticdirectoryandrun"&gt;3. Then go into my static pages folder root (not into the static directory) and run:&lt;/h6&gt;
+
+&lt;pre&gt;&lt;code&gt;buster generate --domain=http://127.0.0.1:2368  
+git add -all  
+git commit -m 'Initial commit'  
+git push  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h6 id="4checksitetoseeifitupdated"&gt;4. Check site to see if it updated.&lt;/h6&gt;
+
+&lt;p&gt;This might seem like a lot, but it's actually really quick, especially if you set up an alias in your .bash_profile for the buster generate command.&lt;/p&gt;
+
+&lt;p&gt;Please email me if you have any questions!&lt;/p&gt;</description><link>http://briank.im/2015/04/11/i-see-ghosts/</link><guid isPermaLink="false">fb0510f6-c0fa-41c8-9fdc-1c4029466946</guid><category>learning</category><category>jekyll</category><category>ghost</category><category>blog</category><category>blogging</category><category>teaching</category><category>cli</category><category>buster</category><dc:creator>bk</dc:creator><pubDate>Sun, 12 Apr 2015 01:59:00 GMT</pubDate></item><item><title>Project 1 and Week 1 Done!</title><description>&lt;h2 id="project1benson"&gt;Project 1 - Benson&lt;/h2&gt;
+
+&lt;p&gt;Over the last 3 days, my group and I finished our first project. In this project, we created a client proposal for a problem that we fabricated: an upcoming zombie apocalypse. &lt;br&gt;
+&lt;img src="http://briank.im/content/images/2015/04/zombie.jpg" alt="Zombie Apocalypse"&gt;&lt;/p&gt;
+
+&lt;p&gt;Our instructors had told us that projects that really pushed the envelope were the ones that impressed, so we thought what better way than to fabricate the need for MTA turnstile data analytics for an upcoming Zombie Apocalypse.&lt;/p&gt;
+
+&lt;h3 id="step1createproblem"&gt;Step 1: Create Problem&lt;/h3&gt;
+
+&lt;p&gt;Our first step was to create the situation. And we thought what better way than to revive an old villain that really struck fear into people's hearts. &lt;br&gt;
+&lt;img src="http://briank.im/content/images/2015/04/dr-evil.jpg" alt="Dr. Evil"&gt;
+Yes, that's right, Dr. Evil. And he's back for a forth installment, except this time with a new twist. He is planning to infect the NYC Subway with a biological agent that will not only kill people, but turn them into Homo Necrosis Zombifis, aka: zombies. So the CDC and the FBI have called upon our data company, Apocalyptics (we specialize in Data Science for global scale crises), to see if we can provide data that will help them to mobilize staff, police and troops to help neutralize a potential outbreak.&lt;/p&gt;
+
+&lt;h3 id="step2analyzedata"&gt;Step 2: Analyze Data&lt;/h3&gt;
+
+&lt;p&gt;Apocalyptics now must quickly find some data (MTA Turnstile data) that will allow us to help figure out high risk areas for the virus to spread. There are some obvious ways to do this, and the first one is to just get a raw reading of subway ridership totals. We can split this up into weekdays, weekends and time of day. (*all figures in millions unles otherwise specified) &lt;br&gt;
+&lt;img src="http://briank.im/content/images/2015/04/daily_ridership.png" alt="MTA Ridership"&gt;&lt;/p&gt;
+
+&lt;p&gt;But this is a bit too generic, so we thought we would give a coverage statistic. How many stations, out of the 468 MTA subway stops, need to be guarded to get a majority of people.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://briank.im/content/images/2015/04/percents.png" alt="Percent Coverage 1"&gt;
+With this data, we were able to make come up with these figures:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://briank.im/content/images/2015/04/coverage.png" alt="Percent Coverage 2"&gt;&lt;/p&gt;
+
+&lt;p&gt;With our limited time (less than 2 days), we weren't able to be much more specific. But with this data we had, we told our potential clients that with access to some more resources, we would be able to deliver a real time analysis of which stations (based on geography) should be manned at which time to minimize the threat to NYC and the rest of the world. And for fun, we created one more chart.. this one as a potential risk level classification system... &lt;br&gt;
+&lt;img src="http://briank.im/content/images/2015/04/risk.png" alt=""&gt;&lt;/p&gt;
+
+&lt;h3 id="step3mistakes"&gt;Step 3: Mistakes&lt;/h3&gt;
+
+&lt;p&gt;Hindsight is 20/20 and that was definitely the case here. Though unfortunately one of the members of our group had to leave the program the day before the project was due, we were still able to come up with a presentation that I believe was well put together. But if we had to do it together, I think we would do some things differently. I would want to find data that could lead to very practical suggestions right away. One calculation we could have computed was a likelihood index of where Dr. Evil might release the pathogen for maximum effect. Another would have been imposing the data we did collect onto a map of NYC.&lt;/p&gt;
+
+&lt;h3 id="step4finalthoughts"&gt;Step 4: Final Thoughts&lt;/h3&gt;
+
+&lt;p&gt;Because it was the first project and we had limited time, I'll show myself some grace. Overall, I think our group did a great job and above all I think we were incredibly creative when it came to coming up with a topic and presentation that was able to keep people's attention and put a smile on people's faces after a long first week at Metis :P&lt;/p&gt;</description><link>http://briank.im/2015/04/10/project-1-and-week-1-done-2/</link><guid isPermaLink="false">822e5794-98af-4a60-949f-d665c1160e0b</guid><category>metis</category><category>zombies</category><category>project1</category><dc:creator>bk</dc:creator><pubDate>Sat, 11 Apr 2015 00:14:00 GMT</pubDate></item><item><title>Do What You Love</title><description>&lt;h2 id="day4atmetis"&gt;Day 4 at Metis&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src="http://briank.im/content/images/2015/04/coffee_cup.jpg" alt=""&gt;&lt;/p&gt;
+
+&lt;p&gt;Metis is located inside of a &lt;a href="https://www.wework.com"&gt;WeWork&lt;/a&gt; facility. Their facilities are awesome and it makes the overall bootcamp experience that much better. It's a coworking space so while there are different offices, there are probably over 50 companies within the space. WeWork provides coffee, beer, and cups. I love the cups because on them they say "Do What You Love". I can tell that a lot of the people who work in this facility really love what they're doing. And one of the reasons why I love being at Metis is because the students love what they are doing. We are constantly geeking out over incredibly nerdy things and excitedly talking about coding and the different projects we are working on. &lt;/p&gt;
+
+&lt;p&gt;This reminds me of why I switched careers to become a coder in the first place. I love to learn, and coding (data science included) definitely requires a lot of it! And it also leads me to think about the next step. In 11 weeks I'll be done with Metis and looking for jobs. Whether I end up staying here or moving to the west coast, I wonder where I'll be working. Will it be a big company or a small one, a tech one or maybe on in education or finance, a job doing purely Data Science or a mixture of my other skill sets? Ultimately, I don't know, but I do know that I love what I'm doing now and the thought of doing this as a full time job is very exciting.&lt;/p&gt;</description><link>http://briank.im/2015/04/09/do-what-you-love/</link><guid isPermaLink="false">9667916c-1402-447f-a354-291f07680e51</guid><category>metis</category><category>learning</category><category>wework</category><dc:creator>bk</dc:creator><pubDate>Fri, 10 Apr 2015 01:37:00 GMT</pubDate></item><item><title>In the Zone</title><description>&lt;h2 id="day3atmetis"&gt;Day 3 at Metis&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src="http://briank.im/content/images/2015/04/metis_pic.jpg" alt="Metis"&gt;&lt;/p&gt;
+
+&lt;p&gt;So far I haven't had much time to reflect, but I was thinking about some things on my commute home today. I was thinking about the adrenaline rush of learning so much and really just working my butt of. I thought about how different this was then my last coding bootcamp I did 2 years ago. And mostly, after only a few days, I was thinking about how well prepared, well thought out and well executed the Metis Data Science Bootcamp is. It is not easy to make everything work, but after the first few days, I think I know why. The teachers and staff are incredibly passionate about what they do and so they do it with excellence. I am glad that there's so much I can learn and glean from them! They are also very multi-dimensional in their skill sets and are also great communicators(our instructors are &lt;a href="https://twitter.com/bo_p"&gt;Bo Peng&lt;/a&gt; and &lt;a href="http://planspace.org/"&gt;Aaron Schumacher&lt;/a&gt;)! I look forward to getting to know each one of them as they help not just in teaching data science but also in interviewing skills, job searching, etc. &lt;/p&gt;
+
+&lt;p&gt;I think because the staff pours so much into this bootcamp, it's hard not to also want to pour out everything into it. Weirdly enough, I find myself wanting to work at home when I get back from a long day at camp and a 1.5hr commute. It's a joy.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://briank.im/content/images/2015/04/home_station.jpg" alt="Home Setup"&gt;&lt;/p&gt;
+
+&lt;p&gt;It's especially a joy with this awesome 21:9 aspect monitor!&lt;/p&gt;</description><link>http://briank.im/2015/04/08/in-the-zone/</link><guid isPermaLink="false">db74bb37-a4a9-443d-af16-2e36f9e87a5a</guid><category>metis</category><category>learning</category><category>bootcamp</category><dc:creator>bk</dc:creator><pubDate>Thu, 09 Apr 2015 00:30:00 GMT</pubDate></item><item><title>Things Get Real</title><description>&lt;h2 id="day2atmetis"&gt;Day 2 at Metis&lt;/h2&gt;
+
+&lt;p&gt;While Day 1 was more of an introduction and orientation day, Day 2 at Metis quickly started off. We dove straight into our first major project named Benson (yes, named after Olivia Benson from Law an Order).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://briank.im/content/images/2015/04/benson.jpg" alt="Benson Project"&gt;&lt;/p&gt;
+
+&lt;p&gt;The project is basically an exploration into some of the major tools we'll be using throughout this bootcamp. We got right into ipython notebook and started by scraping publicly available data from the &lt;a href="http://web.mta.info/developers/turnstile.html"&gt;MTA&lt;/a&gt;. We are basically taking this data and then manipulating it in a way so that we can easily analyze it and come to certain conclusions. I am particularly interested about this data because I commute about 3hrs every day on the subway and it's definitely not the most 'fun' experience... &lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://briank.im/content/images/2015/04/turnstile.jpg" alt="NYC Turnstile"&gt;&lt;/p&gt;
+
+&lt;p&gt;While many of the concepts we go over are fundamentally not that difficult, what gets difficult is the frustration that comes from debugging! As I've learned over the past few years, most of the time spent coding is on debugging minor errors or bugs, and it's no different here.&lt;/p&gt;
+
+&lt;p&gt;But no matter how difficult it gets, I will work hard because I chose to be here and hopefully I made the right choice as I was reminded of today after dinner.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://briank.im/content/images/2015/04/fortune_cookie.jpg" alt="Fortune Cookie"&gt;&lt;/p&gt;</description><link>http://briank.im/2015/04/07/things-get-real/</link><guid isPermaLink="false">3b4e7680-6a95-43ac-9b14-34fedcf7bbed</guid><category>metis</category><category>benson</category><category>projects</category><category>mta</category><dc:creator>bk</dc:creator><pubDate>Wed, 08 Apr 2015 01:19:00 GMT</pubDate></item><item><title>A New Start</title><description>&lt;h2 id="day1atmetis"&gt;Day 1 at Metis&lt;/h2&gt;
 
 &lt;p&gt;About 1 month ago, I moved back to the US after nearly 7 years in Seoul, South Korea. For my first 5 years in Korea, I was teaching high school math, science, statistics and whatever other classes they wanted to throw my way. While it was a joy to teach rebellious teenagers going through the awkwardness of puberty, I made a decision to leave the profession and move towards programming / web development and work with a marginally more grown up version of these teengagers :P After a summer at &lt;a href="http://www.codingdojo.co"&gt;Coding Dojo&lt;/a&gt; in Silicon Valley, I came back to Korea and found a job as a web developer at a Korean design firm. After over a year there I moved to an Asian Entertainment startup and also spent time at a non-profit crowdfunding platform, &lt;a href="http://fivetwo.org"&gt;Five Two Foundation&lt;/a&gt;. Now, I’m looking to transition my career yet again. Today, I officially started at &lt;a href="http://www.thisismetis.com"&gt;Metis&lt;/a&gt; Data Science Bootcamp in NYC.&lt;/p&gt;
 
