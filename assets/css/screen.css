@@ -767,7 +767,7 @@ body.nav-opened .nav {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     display: block;
-    height: auto;
+    height: 80px;
     padding: 1px 0 5px 0;
     width: 80px;
 }
@@ -1195,7 +1195,7 @@ body:not(.post-template) .post-title {
 
 .no-cover.author-head.main-header {
     height: 10vh;
-    min-height: 100px;
+    min-height: 120px;
     background: transparent;
 }
 
