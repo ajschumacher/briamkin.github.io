@@ -49,7 +49,7 @@
     <meta property="og:description" content="Metacritic is a great site but has some incredibly annoying bugs that needed to be debugged so I could scrape it properly!...">
     <meta property="og:url" content="http://briank.im/debugging-metacritic/">
     <meta property="article:published_time" content="2015-04-19T21:53:32.169Z">
-    <meta property="article:modified_time" content="2015-04-19T21:53:32.168Z">
+    <meta property="article:modified_time" content="2015-04-19T22:55:59.341Z">
     <meta property="article:tag" content="projects">
     <meta property="article:tag" content="luther">
     <meta property="article:tag" content="tutorial">
@@ -78,7 +78,7 @@
     "headline": "Metacritic Debugging",
     "url": "http://briank.im/debugging-metacritic/",
     "datePublished": "2015-04-19T21:53:32.169Z",
-    "dateModified": "2015-04-19T21:53:32.168Z",
+    "dateModified": "2015-04-19T22:55:59.341Z",
     "keywords": "projects, luther, tutorial, debugging, metacritic, redirects, pagination",
     "description": "Metacritic is a great site but has some incredibly annoying bugs that needed to be debugged so I could scrape it properly!..."
 }
@@ -121,22 +121,22 @@
             <h4 id="metacriticwhyyyy">Metacritic, whyyyy?</h4>
 
 <p><img src="../content/images/2015/04/metacritic-logo.png" alt="Metacritic">
-In this entry I'm going to talk about 2 major issues that came up while scraping data from metacritic.com which is the most important data source for my Luther Project now. The 2 major issues involved <b>TERRIBLE</b> pagination issues and <b>annoying</b> redirects.</p>
+In this entry I'm going to talk about 2 major issues that came up while scraping data from metacritic.com, which is now the most important data source for my Luther Project. The 2 major issues involved <b>TERRIBLE</b> pagination issues and <b>annoying</b> redirects.</p>
 
 <p>Let's start with the pagination issues: <br>
 <img src="../content/images/2015/04/Screen-Shot-2015-04-19-at-5-25-36-PM.png" alt="Metacritic Pagination"></p>
 
 <h5 id="whatispagination">What is Pagination?</h5>
 
-<p>Pagination is simply when the content doesn't fit on one page so a website adds those annoying links at the bottom for the next pages. However this has been replaced on some sites by infinite loading scripts.  </p>
+<p>Pagination is simply when the content doesn't fit on one page so a website adds those annoying links at the bottom for the next pages. However, this has been replaced on some sites by infinite loading scripts.  </p>
 
 <h5 id="whysobadonmetacritic">Why so bad on metacritic?</h5>
 
-<p>Go to a page like <a href="http://www.metacritic.com/critic/ao-scott?filter=movies&amp;num_items=100&amp;sort_options=critic_score">this</a>. Everything seems okay. And even the first 5 pagination links work fine. But get to the <a href="http://www.metacritic.com/critic/ao-scott?filter=movies&amp;num_items=100&amp;sort_options=critic_score&amp;page=6">7th one</a> and you'll notice something weird. This one has 300 entries, not 100! And even weirder, pages 8 and 9 have the exact same lists! What's even weirder is that if you're using the default sorting by critic score, even this weird pagination issue is inconsistent! So how to solve this?</p>
+<p>Go to a page like <a href="http://www.metacritic.com/critic/ao-scott?filter=movies&amp;num_items=100&amp;sort_options=critic_score">this</a>. Everything seems okay. And even the first 6 pagination links work fine. But get to the <a href="http://www.metacritic.com/critic/ao-scott?filter=movies&amp;num_items=100&amp;sort_options=critic_score&amp;page=6">7th one</a> and you'll notice something weird. This one has 300 entries, not 100! And even weirder, pages 8 and 9 have the exact same lists! What's even weirder is that if you're using the default sorting by critic score, even this weird pagination issue is inconsistent! So how to solve this?</p>
 
 <h5 id="solution">Solution</h5>
 
-<p>The solution has a few components to it. Basically I found out that when you sort it by Metascore, the issue still comes up, but it is at least consistent throughout starting from page 7 and onward. And so how to solve it?  </p>
+<p>The solution has a few components to it. Basically I found out that when you sort it by Metascore, the issue still comes up, but it is at least consistent throughout, starting from page 7 and onward.  </p>
 
 <pre><code>  skip = 0
   for num in range(0, (int(pagination))):
@@ -149,7 +149,7 @@ In this entry I'm going to talk about 2 major issues that came up while scraping
           skip += 1
 </code></pre>
 
-<p>Basically this script first detects if there are more than the 100 entries. If there are it adds a skip. And it will then skip the next 2 pages. And then start again in 3 pages.</p>
+<p>Basically this script first detects if there are more than the 100 entries. If there are, it adds a skip. And it will then skip the next 2 pages. And then start again in 3 pages.</p>
 
 <p><img src="../content/images/2015/04/website_redirection.jpg" alt="URL Redirect"></p>
 
@@ -171,7 +171,7 @@ except:
     movie_doc = just_get_html(f.url)
 </code></pre>
 
-<p>Basically, I am importing and using the requests module from Python. If the regular url doesn't exist then it tries to find the redirect. And then it uses the new redirected page url to scrape. Simple. <br>
+<p>Basically, I am importing and using the requests module from Python. If the regular url doesn't exist, then it tries to find the redirect. And then it uses the new redirected page url to scrape. Simple. <br>
 <br>  </p>
 
 <h5 id="whatilearnedtoday">What I Learned Today:</h5>
