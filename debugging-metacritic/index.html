@@ -10,25 +10,25 @@
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="apple-touch-icon" sizes="57x57" href="../assets/favicon/apple-touch-icon-57x57.png?v=6e90e05dea">
-    <link rel="apple-touch-icon" sizes="60x60" href="../assets/favicon/apple-touch-icon-60x60.png?v=6e90e05dea">
-    <link rel="apple-touch-icon" sizes="72x72" href="../assets/favicon/apple-touch-icon-72x72.png?v=6e90e05dea">
-    <link rel="apple-touch-icon" sizes="76x76" href="../assets/favicon/apple-touch-icon-76x76.png?v=6e90e05dea">
-    <link rel="apple-touch-icon" sizes="114x114" href="../assets/favicon/apple-touch-icon-114x114.png?v=6e90e05dea">
-    <link rel="apple-touch-icon" sizes="120x120" href="../assets/favicon/apple-touch-icon-120x120.png?v=6e90e05dea">
-    <link rel="apple-touch-icon" sizes="144x144" href="../assets/favicon/apple-touch-icon-144x144.png?v=6e90e05dea">
-    <link rel="apple-touch-icon" sizes="152x152" href="../assets/favicon/apple-touch-icon-152x152.png?v=6e90e05dea">
-    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon-180x180.png?v=6e90e05dea">
-    <link rel="icon" type="image/png" href="../assets/favicon/favicon-32x32.png?v=6e90e05dea">
-    <link rel="icon" type="image/png" href="../assets/favicon/android-chrome-192x192.png?v=6e90e05dea">
-    <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png?v=6e90e05dea">
-    <link rel="icon" type="image/png" href="../assets/favicon/favicon-16x16.png?v=6e90e05dea">
-    <link rel="manifest" href="../assets/favicon/manifest.json?v=6e90e05dea">
+    <link rel="apple-touch-icon" sizes="57x57" href="../assets/favicon/apple-touch-icon-57x57.png?v=68606a39d2">
+    <link rel="apple-touch-icon" sizes="60x60" href="../assets/favicon/apple-touch-icon-60x60.png?v=68606a39d2">
+    <link rel="apple-touch-icon" sizes="72x72" href="../assets/favicon/apple-touch-icon-72x72.png?v=68606a39d2">
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/favicon/apple-touch-icon-76x76.png?v=68606a39d2">
+    <link rel="apple-touch-icon" sizes="114x114" href="../assets/favicon/apple-touch-icon-114x114.png?v=68606a39d2">
+    <link rel="apple-touch-icon" sizes="120x120" href="../assets/favicon/apple-touch-icon-120x120.png?v=68606a39d2">
+    <link rel="apple-touch-icon" sizes="144x144" href="../assets/favicon/apple-touch-icon-144x144.png?v=68606a39d2">
+    <link rel="apple-touch-icon" sizes="152x152" href="../assets/favicon/apple-touch-icon-152x152.png?v=68606a39d2">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon-180x180.png?v=68606a39d2">
+    <link rel="icon" type="image/png" href="../assets/favicon/favicon-32x32.png?v=68606a39d2">
+    <link rel="icon" type="image/png" href="../assets/favicon/android-chrome-192x192.png?v=68606a39d2">
+    <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png?v=68606a39d2">
+    <link rel="icon" type="image/png" href="../assets/favicon/favicon-16x16.png?v=68606a39d2">
+    <link rel="manifest" href="../assets/favicon/manifest.json?v=68606a39d2">
     <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-TileImage" content="/assets/favicon/mstile-144x144.png?v=6e90e05dea">
+    <meta name="msapplication-TileImage" content="/assets/favicon/mstile-144x144.png?v=68606a39d2">
     <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=6e90e05dea">
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=68606a39d2">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic%7COpen+Sans:700,400">
 
 	<script>
@@ -49,7 +49,7 @@
     <meta property="og:description" content="Metacritic is a great site but has some incredibly annoying bugs that needed to be debugged so I could scrape it properly!...">
     <meta property="og:url" content="http://briank.im/debugging-metacritic/">
     <meta property="article:published_time" content="2015-04-19T21:53:32.169Z">
-    <meta property="article:modified_time" content="2015-04-19T22:55:59.341Z">
+    <meta property="article:modified_time" content="2015-04-20T03:48:47.511Z">
     <meta property="article:tag" content="projects">
     <meta property="article:tag" content="luther">
     <meta property="article:tag" content="tutorial">
@@ -78,7 +78,7 @@
     "headline": "Metacritic Debugging",
     "url": "http://briank.im/debugging-metacritic/",
     "datePublished": "2015-04-19T21:53:32.169Z",
-    "dateModified": "2015-04-19T22:55:59.341Z",
+    "dateModified": "2015-04-20T03:48:47.511Z",
     "keywords": "projects, luther, tutorial, debugging, metacritic, redirects, pagination",
     "description": "Metacritic is a great site but has some incredibly annoying bugs that needed to be debugged so I could scrape it properly!..."
 }
@@ -155,7 +155,7 @@ In this entry I'm going to talk about 2 major issues that came up while scraping
 
 <h5 id="whatisaredirect">What is a redirect</h5>
 
-<p>Basically, sometimes a link has moved or a url has been changed, so the site will redirect you to the correct url if you go to the right one. This presents a bit of a problem for scraping because you're telling the scraper to scrape a certain url, not the redirected site.</p>
+<p>Basically, sometimes a link has moved or a url has been changed, so the site will redirect you to the correct url if you go to the right one. On Metacritic, for example, there may be a link to this: (<a href="http://www.metacritic.com/movie/twelve-years-a-slave">http://www.metacritic.com/movie/twelve-years-a-slave</a>) but when you click on it, it will redirect to this: (<a href="http://www.metacritic.com/movie/12-years-a-slave">http://www.metacritic.com/movie/12-years-a-slave</a>). This presents a bit of a problem for scraping because the scraper wants to scrape the first site but doesn't get anything back because of the redirect.</p>
 
 <h5 id="solution">Solution</h5>
 
@@ -222,8 +222,8 @@ except:
 
 
 
-    <script src="../public/jquery.js?v=6e90e05dea"></script>
+    <script src="../public/jquery.js?v=68606a39d2"></script>
 
-    <script type="text/javascript" src="../assets/js/index.js?v=6e90e05dea"></script>
+    <script type="text/javascript" src="../assets/js/index.js?v=68606a39d2"></script>
 
 </body>
