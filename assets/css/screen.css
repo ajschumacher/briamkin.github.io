@@ -413,6 +413,8 @@ main.content {
 .blog-nav-item {
     color: #2e65b8;
     margin: 10px 0 0;
+    width: 50%;
+    float: left;
 }
 
 .header-link {

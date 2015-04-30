@@ -12,7 +12,6 @@
         // for better relative/absolute positioning.
 
         //$("#blog-logo").prependTo("#site-head-content");
-
     });
 
 }(jQuery));
