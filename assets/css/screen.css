@@ -373,6 +373,14 @@ table.plain {
     background-image: none !important;
 }
 
+.home-page-header {
+    text-align: center;
+    font-size: 27px;
+    padding: 0 0 20px;
+    border-bottom: 2px solid #2e65b8;
+    margin: 40px 10%;
+}
+
 main.content {
 	padding-left: 17em;
 }
