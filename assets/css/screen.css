@@ -370,7 +370,7 @@ table.plain {
     background: #303538 no-repeat center center;
     background-size: cover;
 	top: 0;
-
+    background-image: none !important;
 }
 
 main.content {
@@ -429,7 +429,7 @@ main.content {
   color: #2e65b8;
   border-bottom: 1px solid black;
   padding-bottom: 32px;
-  line-height: 57px;
+  line-height: 57px;cd ~
 }
 
 /* Every post, on every page, gets this style on its <article> tag */
@@ -469,6 +469,7 @@ main.content {
     margin-top: 1.25rem;
     width: 25%;
     text-align: center;
+    margin-right: 15px;
 }
 
 .post-thumbnail:before {
