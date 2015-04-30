@@ -12,7 +12,7 @@
         // for better relative/absolute positioning.
 
         //$("#blog-logo").prependTo("#site-head-content");
-        $("a[href^='http://'], a[href^='https://']").not(".header-link").attr("target", "_blank");
+        $("a[href^='http://'], a[href^='https://']").not(".header-link").not("#blog-logo").attr("target", "_blank");
     });
 
 }(jQuery));
