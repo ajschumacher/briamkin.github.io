@@ -52,7 +52,7 @@
     <meta property="og:url" content="http://briank.im/watching-the-gatekeepers-critiquing-the-almighty-critics/" />
     <meta property="og:image" content="http://briank.im/content/images/2015/04/critic-1.jpg" />
     <meta property="article:published_time" content="2015-04-30T14:21:59.791Z" />
-    <meta property="article:modified_time" content="2015-04-30T20:44:09.517Z" />
+    <meta property="article:modified_time" content="2015-05-01T01:36:32.711Z" />
     <meta property="article:tag" content="metis" />
     <meta property="article:tag" content="projects" />
     <meta property="article:tag" content="scraping" />
@@ -80,7 +80,7 @@
     "headline": "Critiquing the Critics",
     "url": "http://briank.im/watching-the-gatekeepers-critiquing-the-almighty-critics/",
     "datePublished": "2015-04-30T14:21:59.791Z",
-    "dateModified": "2015-04-30T20:44:09.517Z",
+    "dateModified": "2015-05-01T01:36:32.711Z",
     "image": "http://briank.im/content/images/2015/04/critic-1.jpg",
     "keywords": "metis, projects, scraping, luther, project write-ups",
     "description": "Are film critics as bad as they are caricatured to be? Or is it overstated. Find out here!..."
@@ -125,7 +125,13 @@
 
         <section class="post-content" id="jetzt-container">
             <p><img src="../content/images/2015/04/anton-ego.jpg" alt="Anton Ego Ratatouille" />
-There are no shortage of articles and trolls on the internet that call out film critics for being a bit "snobby", over-the-top, or out of touch. Just look <a href="http://www.worldarchitecture.org/authors-links/cpncv/whats-wrong-with-current-film-critics.html">here</a> or <a href="http://thelede.blogs.nytimes.com/2007/03/20/calling-out-film-critics/?_r=0">here</a> or <a href="http://www.phillymag.com/news/2013/04/12/film-critics-wrong/">here</a> or.. okay you get the idea! A simple <a href="https://www.google.com/search?q=film+critics+suck">google search</a> will reveal quite a lot of discontent with today's film critics. Are all these people just people who are upset because their favorite movies got bad reviews? We definitely have a lot of cry babies and internet trolls in society today: <br />
+A few weeks ago I was on a flight and was looking through the movies they offered. Two movies caught my eyes: <br />
+<img src="../content/images/2015/04/lincolnmovies.jpg" alt="Lincoln Movies" />
+Should I watch the 'regular' version of Lincoln or the 'vampire hunter' version... Looking up the Metacritic review of Lincoln Vampire Hunter I found this: <br />
+<img src="../content/images/2015/04/lincolnvampire.jpg" alt="Lincoln Vampire Hunter Review" />
+While critics for the most part really didn't like it, it had 'decent' support from audiences with the majority of audiences giving it a positive review. So I was left with a choice: to go with the critically acclaimed Lincoln movie or to go with my gut instinct...</p>
+
+<p>This may be a dilemma you have faced and weren't sure if you could trust the film critics. There is no shortage of articles and trolls on the internet that call out film critics for being a bit "snobby", over-the-top, or out of touch. Just look <a href="http://www.worldarchitecture.org/authors-links/cpncv/whats-wrong-with-current-film-critics.html">here</a> or <a href="http://thelede.blogs.nytimes.com/2007/03/20/calling-out-film-critics/?_r=0">here</a> or <a href="http://www.phillymag.com/news/2013/04/12/film-critics-wrong/">here</a> or.. okay you get the idea! A simple <a href="https://www.google.com/search?q=film+critics+suck">google search</a> will reveal quite a lot of discontent with today's film critics. Are all these people just upset because their favorite movies got bad reviews? We definitely do have a lot of cry babies and internet trolls in society today... <br />
 <img src="../content/images/2015/04/cry-baby.jpg" alt="cry baby" />
 One guy on <a href="http://www.cracked.com/funny-6303-movie-critics/">cracked.com</a> went as far as to describe a film critic like so:  </p>
 
@@ -143,12 +149,12 @@ One guy on <a href="http://www.cracked.com/funny-6303-movie-critics/">cracked.co
 
 <p>So it's great to make wild outlandish claims with anecdotal evidence like this: <br />
 <img src="../content/images/2015/04/madblackwomanmovie.jpg" alt="Diary of a Mad Black Woman Rotten Tomatoes" />
-That is a 71% difference! Critics on average absolutely hated this movies while nearly 100,000 audience members liked it! How can the critics be so wrong? How can they be so out of touch? This is ridiculous! Or is it just a outlier? <br />
+That is a 71% difference! Critics on average absolutely hated this movies while nearly 100,000 audience members liked it! How can the critics be so wrong? How can they be so out of touch? This is ridiculous! Or is this example just an outlier? <br />
 <img src="../content/images/2015/04/outlier.jpg" alt="outlier" /></p>
 
 <h5 id="thequestionarefilmcriticsreallythatoutoftouch">The Question: Are film critics really that out of touch?</h5>
 
-<p>Are film critics as bad as people say? Is there actual data that back up this assertion? Well, I thought I would find out...</p>
+<p>Are film critics as bad as people say? Is there actual data that backs up this assertion? Well, I thought I would find out...</p>
 
 <h5 id="themethodhowshouldwedothis">The Method: How should we do this?</h5>
 
@@ -162,53 +168,55 @@ This seems to be a very common way, but it definitely has its issues. Film criti
 
 <p><img src="../content/images/2015/04/rsquared.jpg" alt="R Squared" /></p>
 
-<p>Gotta love statistics! We will be using the R  squared or "The Coefficient of Determination" to figure out if they are in fact "correlated" (actually using R^2 Adjusted to account for different sample sizes). So measuring this is very different than comparing averages. In other words, we will be measuring how critics and audience members <b>change together</b>. I know this is technically not what our formula is calculating, but close enough!</p>
+<p>Gotta love statistics! We will be using the R  squared or "The Coefficient of Determination" to figure out if they are in fact "correlated" (I'm actually using R^2 Adjusted to account for different numbers of reviews). So measuring this is very different than just comparing averages. </p>
+
+<p>In other words, we will be measuring how critics and audience members <b>change together</b>. I know this is technically not what our formula is calculating, but close enough.</p>
 
 <h5 id="strikestealingstrikecollectingthedata"><strike>Stealing</strike>  Collecting the Data</h5>
 
 <p><img src="../content/images/2015/04/stealing_data.jpg" alt="Stealing Data" />
-So for this project, I <a href="http://briank.im/tag/scraping/">scraped</a> (using <a href="http://briank.im/scraping">beautiful soup</a>) <a href="http://www.metacritic.com/">Metacritic</a> to get information about each film critic. Basically I stole all the critic information off of the Metacritic website (slowly enough so that they wouldn't blacklist me) and put it into a giant database so I could analyze it. I collected all critics' reviews, scores for the movie and the corresponding <a href="http://www.metacritic.com/about-metascores">metascores</a> and audience member review averages for each movie (If you're interested in the actual math/coding that I did, you can see it <a href="https://github.com/briamkin/best_critic">here</a>). </p>
+So for this project, I <a href="http://briank.im/tag/scraping/">scraped</a> (using <a href="http://briank.im/scraping">beautiful soup</a>) <a href="http://www.metacritic.com/">Metacritic</a> to get information about each film critic. Basically I stole all the critic information off of the Metacritic website (slowly enough so that they wouldn't blacklist me) and put it into a giant database so I could analyze it. I collected all critics' reviews, scores for the movie and the corresponding <a href="http://www.metacritic.com/about-metascores">metascores</a> and user review averages for each movie (If you're interested in the actual math/coding that I did, you can see it <a href="https://github.com/briamkin/best_critic">here</a>). </p>
 
 <h5 id="analyzingthedata">Analyzing the Data</h5>
 
-<p>Like any major dataset, there was a lot of "cleaning" that I had to do because much of it was incomplete. But when all was said and done, about 300 critics (out of 600) qualified to be used in this analysis (at least 50 eligible reviews with corresponding audience member reviews and metascores). Now all that's left to do is to calculate how correlated each critic is with the average audience member.</p>
+<p>Like any major dataset, there was a lot of "cleaning" that I had to do because much of it was incomplete. But when all was said and done, about 300 critics (out of 600) qualified to be used in this analysis (critics with at least 50 eligible reviews with corresponding audience member reviews and metascores). Now all that's left to do is to calculate how correlated each critic is with the average audience member.</p>
 
 <h5 id="overallpicture">Overall Picture</h5>
 
 <p>So to give an overall picture first: <br />
 <img src="../content/images/2015/04/overall_dist.jpg" alt="Distribution of Correlation" />
-From this we see that there's a pretty wide distribution of correlations amongst the 300+ critics with most in the 10% - 20% range. Now what do these percentages mean? Well if the correlation was 0% it would mean that there absolutely no mutual pattern between the critic and the average audience member. Whereas if it was 100% it would mean that they were perfectly aligned in their views across all movies. Now what does it mean that the average correlation is 16%? </p>
+From this we see that there's a pretty wide distribution of correlations amongst the 300+ critics with most in the 10% - 20% range. Now what do these percentages mean? Well if the correlation was 0% it would mean that there absolutely no mutual pattern between the critic and the average audience member. Whereas if it was 100% it would mean that they were perfectly aligned in their views across all movies, not that they had the same average score. Now what does it mean that the average correlation is 16%? </p>
 
-<p>It means that the internet troll are right! That's right! Sorry for feeding the trolls... <br />
+<p>It means that the internet troll are onto something! That's right! Sorry for feeding the trolls... <br />
 <img src="../content/images/2015/04/internettrolls.jpg" alt="internet trolls" /></p>
 
-<p>But we can conclusively conclude (and redundantly) that film critics are completely out of tune with the average audience member! So let me give you an example of what a graph might look like for an out of tune film critic. <br />
+<p>But we can conclusively conclude (and redundantly) that film critics generally and consistently do not have the same views on movies as an audience member! So let me give you an example of what a graph might look like for an out of tune film critic. <br />
 <img src="../content/images/2015/04/j_hoberman.jpg" alt="J Hoberman Distribution" />
-So this is a scatter plot of film critic J. Hoberman's movie review score against the average audience member review for that same movie. You can see here that there is no clear pattern, hence the measly 3.8% correlation. Ironically enough, J. Hoberman was actually <a href="http://variety.com/2012/film/news/village-voice-lays-off-film-critic-j-hoberman-6369/">let go</a> a couple years ago by the Village Voice after 40 years of working there.</p>
+So this is a scatter plot of film critic J. Hoberman's movie review scores against the average audience member review for that same movie. You can see here that there is no clear pattern, hence the measly 3.8% correlation. Ironically enough, J. Hoberman was actually <a href="http://variety.com/2012/film/news/village-voice-lays-off-film-critic-j-hoberman-6369/">let go</a> a couple years ago by the Village Voice after 40 years of working there.</p>
 
 <h5 id="dogenresormpaaratingsmatter">Do Genres or MPAA Ratings Matter?</h5>
 
-<p>Well maybe this is only the case because there are so many different genres and you can't just generalize everything. It also might be different for MPAA ratins you say? So I ran the calculations, dividing by major genres and got a few interesting results.</p>
+<p>Well maybe this is only the case because there are so many different genres and you can't just generalize everything. People are allowed to have different opinions okay!? It also might be different for different MPAA ratings you say? So I ran the calculations, dividing by major genres and ratings, and got a few interesting results.</p>
 
-<p>For ratings, I found that overall, the correlations still remained low. <br />
+<p>For ratings, I found that overall, the correlations still remained low very. <br />
 <img src="../content/images/2015/04/mpaa_ratings.png" alt="mpaa ratings" />
-OVerall, R-rated movies had the last correlation at 13% and PG movies had the highest correlation at about 21%.</p>
+Overall, R-rated movies had the lowest correlation at 13% and PG movies had the highest correlation at about 21%. That means there's far greater disagreement as the ratings get more adult.</p>
 
 <p>For genres, I got a somewhat similar distribution: <br />
 <img src="../content/images/2015/04/genres.png" alt="genres" />
 Family and Animation were the highest by far with 28% and 26% correlations. Drama, surprisingly, was the lowest with a 11% correlation. </p>
 
-<p>I think from these we can say that family-oriented movies, usually rated G or PG, have the highest correlations between critics and audiences.</p>
+<p>I think from these we can say that family-oriented movies, usually rated G or PG, have the highest correlations between critics and audiences. They are generally reviewed similarly!</p>
 
 <h5 id="thestrikedundiesstrikecriticawards">The <strike>Dundies</strike> Critic Awards</h5>
 
 <p><img src="../content/images/2015/04/dundies-1.jpg" alt="Dundies" />
-So using this data, I came up with a bunch of different measurements that seemed cool. So I really dug deep into my creativity reservoirs and decided to present them as "The Critic Awards".</p>
+So using this data, I came up with a bunch of different measurements that seemed cool at the time... So I really dug deep into my creativity reservoirs and decided to present them as "The Critic Awards". Here are the different categories along with the winners!</p>
 
 <h5 id="thepeoplescriticalonsoduralde">The People's Critic - Alonso Duralde</h5>
 
 <p><img src="../content/images/2015/04/alsono_duralde_profile.jpg" alt="Alonso Duralde" />
-This award goes to the critic with the <b>highest</b> correlation with the average audience member. So with a correlation of 44%, the winner is <a href="https://twitter.com/aduralde">Alonso Duralde</a> of The <a href="http://www.thewrap.com/">Wrap</a>. Congratulations Alonso, you deserved it! And hopefully you will read this and retweet it to your well-deserved 9,000 followers!</p>
+This award goes to the critic with the <b>highest</b> correlation with the average audience member. So with a correlation of 44%, the winner is <a href="https://twitter.com/aduralde">Alonso Duralde</a> of <a href="http://www.thewrap.com/">The Wrap</a>. Congratulations Alonso, you deserved it! And hopefully you will read this and retweet it to your well-earned 9,000 followers!</p>
 
 <p>If you're wondering what a more highly correlated scatter plot looks like, here you go! <br />
 <img src="../content/images/2015/04/Alonso_Duralde.jpg" alt="Alonso Duralde" /></p>
@@ -220,35 +228,39 @@ This award goes to the critic who is the <b>LEAST</b> aligned with the average a
 
 <h5 id="thepeoplespublicationtotalfilm">The People's Publication - Total Film</h5>
 
-<p>This award goes to the publication that is most aligned with everyday folks like you and me. Congrats <a href="https://twitter.com/totalfilm">Total Film</a> with an average 42.4% correlation across 13 different critics!</p>
+<p>This award goes to the publication that is most aligned with everyday folks like you and me. Congrats <a href="https://twitter.com/totalfilm">Total Film</a> with an average 42.4% correlation across 13 different critics! </p>
+
+<p>If you're wondering why this is so high given that the highest critic value is only a percent higher, it's because many of the critics from Total Film didn't qualify for the individual rankings as they didn't have enough reviews.</p>
 
 <h5 id="theantipeoplespublicationthedallasobserver">The Anti-People's Publication - The Dallas Observer</h5>
 
-<p>Congratulations to <a href="https://twitter.com/dallas_observer">The Dallas Observer</a>, you are officially out of touch with the average audience member with only an 8% average correlation across 7 critics!</p>
+<p>Congratulations to <a href="https://twitter.com/dallas_observer">The Dallas Observer</a>, you are officially out of touch with the average audience member with only an 8% average correlation across your 7 represented critics!</p>
 
 <h5 id="theoptimisticcriticcalvinwilson">The Optimistic Critic - Calvin Wilson</h5>
 
 <p><img src="../content/images/2015/04/optimistic.jpg" alt="thumbs up" />
-This award goes to the critic who, on average, rates movies much more highly than the average audience member. Congratulations <a href="https://twitter.com/calvinwilsonstl">Calvin Wilson</a> of the [St. Louis Post-Dispatch](https://twitter.com/stltoday, you gave an average review that was 9.9% higher than the average!</p>
+This award goes to the critic who, on average, rated movies much more highly than the average audience member. Congratulations <a href="https://twitter.com/calvinwilsonstl">Calvin Wilson</a> of the <a href="https://twitter.com/stltoday">St. Louis Post-Dispatch</a>, you gave an average review that was 9.9% higher than audience members!</p>
 
 <h5 id="thesnobbiestcriticstevesimels">The Snobbiest Critic - Steve Simels</h5>
 
 <p><img src="../content/images/2015/04/snobby.jpg" alt="snob" />
-Congratulations Steve Simels, of <a href="https://twitter.com/tvguide">TV Guide</a>, you gave ratings that were on average, 24.3% lower than the average audience member! </p>
+Congratulations Steve Simels of <a href="https://twitter.com/tvguide">TV Guide</a>, you gave ratings that were, on average, 24.3% lower than the average audience member! <b>24.3%!</b> </p>
 
 <h5 id="thecriticscriticjohnhartl">The Critic's Critic - John Hartl</h5>
 
-<p>This award goes to the critic that is most closely aligned with the average critic! How well do a critic's reviews align with the metascore(weighted critics' average) for that movie. Congratulations <a href="http://www.seattletimes.com/author/john-hartl/">Jon Hartl</a>, of the <a href="https://twitter.com/seattletimes">Seattle Times</a>, you were on average 78% aligned with the average critic!</p>
+<p>This award goes to the critic that is most closely aligned with other critics! How well do a critic's reviews align with the metascore(weighted critics' average) for each movie. Congratulations <a href="http://www.seattletimes.com/author/john-hartl/">Jon Hartl</a> of the <a href="https://twitter.com/seattletimes">Seattle Times</a>, you were on average 78% aligned with the average critic!</p>
 
 <h5 id="therenegadecriticphilhall">The Renegade Critic - Phil Hall</h5>
 
 <p><img src="../content/images/2015/04/renegade.jpg" alt="Renegade" />
-This goes to the critic who goes against the grain of his fellow critics! Congratulations <a href="http://en.wikipedia.org/wiki/Phil_Hall_(US_writer)">Phil Hall</a> of <a href="https://twitter.com/filmthreat">Film Threat</a>! While you may have been misaligned with the average audience member, you were also completely misaligned with other critics! You really play your drum to another beat... you only had a 0.86% correlation with your fellow critic! </p>
+This goes to the critic who goes against the grain of his fellow ilk! Congratulations <a href="http://en.wikipedia.org/wiki/Phil_Hall_(US_writer)">Phil Hall</a> of <a href="https://twitter.com/filmthreat">Film Threat</a>! While you may have been misaligned with the average audience member, you were also completely misaligned with other critics! You definitely march to the beat of another drum... you only had a 0.86% correlation with your fellow average critic! </p>
 
 <h5 id="conclusions">Conclusions</h5>
 
-<p>And so this concludes the first round of <b>The Critic Awards</b>! I hope you enjoyed this article and realize that most film critics aren't necessarily aligned with your exact movie taste. Though maybe reviews are more trustworthy for the obvious movies (ie. Shawshank Redemption, The Godfather, etc.), there is still a lot of variability! So take a chance when you can and give a movie a try even if it has a low score on Rotten Tomatoes or Metacritic! I know that I didn't regret watching <a href="http://www.rottentomatoes.com/m/abraham_lincoln_vampire_hunter/">Abraham Lincoln Vampire Hunter</a> insead of <a href="http://www.rottentomatoes.com/m/lincoln_2011">Lincoln</a>. <br />
-<img src="../content/images/2015/04/lincolnmovies.jpg" alt="Lincoln Movies" /></p>
+<p>And so this concludes the first round of <b>The Critic Awards</b>! I hope you enjoyed this article and realize that most film critics aren't necessarily aligned with your exact movie taste. Though maybe reviews are more trustworthy for the obvious movies (ie. Shawshank Redemption, The Godfather, etc.), there is still a lot of variability! So take a chance when you can and give a movie a try even if it has a low score on Rotten Tomatoes or Metacritic! </p>
+
+<p>I know that I didn't regret watching <a href="http://www.rottentomatoes.com/m/abraham_lincoln_vampire_hunter/">Abraham Lincoln Vampire Hunter</a> insead of <a href="http://www.rottentomatoes.com/m/lincoln_2011">Lincoln</a>. <br />
+<img src="../content/images/2015/04/lincoln_vampire.jpg" alt="Lincoln Vampire Hunter" /></p>
 
 <h5 id="futurethoughts">Future Thoughts</h5>
 
