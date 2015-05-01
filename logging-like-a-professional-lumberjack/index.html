@@ -51,7 +51,7 @@
     <meta property="og:url" content="http://briank.im/logging-like-a-professional-lumberjack/">
     <meta property="og:image" content="http://briank.im/content/images/2015/04/workout_log.jpg">
     <meta property="article:published_time" content="2015-04-29T00:45:00.000Z">
-    <meta property="article:modified_time" content="2015-05-01T14:24:47.969Z">
+    <meta property="article:modified_time" content="2015-05-01T14:27:56.445Z">
     <meta property="article:tag" content="python">
     <meta property="article:tag" content="tutorial">
     <meta property="article:tag" content="logging">
@@ -77,7 +77,7 @@
     "headline": "Logging in Python",
     "url": "http://briank.im/logging-like-a-professional-lumberjack/",
     "datePublished": "2015-04-29T00:45:00.000Z",
-    "dateModified": "2015-05-01T14:24:47.969Z",
+    "dateModified": "2015-05-01T14:27:56.445Z",
     "image": "http://briank.im/content/images/2015/04/workout_log.jpg",
     "keywords": "python, tutorial, logging",
     "description": "Logging in Python is very necessary as a debugging tool. It allows us to see why our program breaks and to fix it quickly...."
@@ -146,10 +146,10 @@ logging.basicConfig(filename='debug.log',level=logging.DEBUG)
 
 <p>There you go, now your system is setup to begin logging! So how do you actually make your program log? Also not that hard!  </p>
 
-<pre><code class="language-python">logger.debug("Starting the scrape")  
-logger.info("Finished scraping critic")  
-logger.warning("Critic url does not exist")  
-logger.critical("Save yourself while you still have time")  
+<pre><code class="language-python">logging.debug("Starting the scrape")  
+logging.info("Finished scraping critic")  
+logging.warning("Critic url does not exist")  
+logging.critical("Save yourself while you still have time")  
 </code></pre>
 
 <p>Try to  run this and see if it's creating/writing into debug.log. If it is, maybe we can move onto a slightly more advanced logging idea: Rotating File Handlers.</p>
